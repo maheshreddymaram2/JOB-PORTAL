@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot 2025-01-25 221809.png" alt="Company Logo" class="logo">
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin-profile.html">Profile</a></li>
+                <li><a href="#" id="logout-link">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="admin-dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><a href="#admin-details">Admin Details</a></li>
+                    <li><a href="#company-details">Company Details</a></li>
+                    <li><a href="#add-job">Add Job Post</a></li>
+                    <li><a href="#hr-availability">HR Availability</a></li>
+                    <li><a href="#hr-list">HR List</a></li>
+                    <li><a href="#job-posts">Job Posts</a></li>
+                    <li><a href="#admin-hr-chat">Admin-HR Chat</a></li>
+                </ul>
+            </nav>
+            <a href="#" id="logout-link" class="logout-button">Sign Out</a>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- HR Availability Overview Section -->
+            <section id="hr-availability">
+                <h2>HR Availability</h2>
+                <table id="hr-availability-table">
+                    <thead>
+                        <tr>
+                            <th>HR Name</th>
+                            <th>Status</th>
+                            <th>Current Assignments</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hr-availability-list">
+                        <!-- HR availability data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Admin Details Section -->
+            <section id="admin-details">
+                <!-- Admin details will be populated by JavaScript -->
+            </section>
+
+            <!-- Company Details Section -->
+            <section id="company-details">
+                <h2>Company Details</h2>
+                <form id="company-details-form">
+                    <div class="form-group">
+                        <label for="logo">Company Logo:</label>
+                        <input type="file" id="logo" name="logo" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">Company Name:</label>
+                        <input type="text" id="company-name" name="company-name" placeholder="ABC Corp.">
+                    </div>
+                    <div class="form-group">
+                        <label for="employees">Number of Employees:</label>
+                        <input type="number" id="employees" name="employees" placeholder="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Company Description:</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Your company description goes here."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" placeholder="Location">
+                    </div>
+                    <button type="submit">Save Changes</button>
+                </form>
+            </section>
+
+            <!-- Add Job Post Section -->
+            <section id="add-job">
+                <h2>Add Job Post</h2>
+                <form id="addJobForm">
+                    <div class="form-group">
+                        <label for="job-title">Job Title:</label>
+                        <input type="text" id="job-title" name="job-title" placeholder="Job Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-description">Description:</label>
+                        <textarea id="job-description" name="job-description" rows="4" placeholder="Job description goes here."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-requirements">Requirements:</label>
+                        <textarea id="job-requirements" name="job-requirements" rows="4" placeholder="Job requirements go here."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="job-location">Location:</label>
+                        <input type="text" id="job-location" name="job-location" placeholder="Job location goes here.">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-salary">Salary:</label>
+                        <input type="text" id="job-salary" name="job-salary" placeholder="Job salary">
+                    </div>
+                    <div class="form-group">
+                        <label for="assign-hr">Assign HR:</label>
+                        <select id="assign-hr" name="assign-hr">
+                            <!-- HR options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <button type="submit">Add Job Post</button>
+                </form>
+            </section>
+
+            <!-- HR List Section -->
+            <section id="hr-list">
+                <h2>HR List</h2>
+                <ul id="hr-list">
+                    <!-- HR details will be populated by JavaScript -->
+                </ul>
+            </section>
+
+            <!-- Job Posts Display Section -->
+            <section id="job-posts">
+                <h2>Job Posts</h2>
+                <table id="job-table">
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Description</th>
+                            <th>Location</th>
+                            <th>Salary</th>
+                            <th>Assigned HR</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="job-list">
+                        <!-- Job posts will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Admin-HR Chat Section -->
+            <section id="admin-hr-chat">
+                <h2>Admin-HR Chat</h2>
+                <div class="chat-sidebar">
+                    <label for="hr-list">Select HR:</label>
+                    <select id="hr-list">
+                        <option value="">Select an HR</option>
+                        <!-- HR options will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div id="chat-container">
+                    <div id="chat-history">
+                        <!-- Chat messages will be displayed here -->
+                    </div>
+                    <div id="chat-input-container">
+                        <textarea id="chat-input" placeholder="Type your message..."></textarea>
+                        <button id="send-chat-button">Send</button>
+                    </div>
+                </div>
+                <div id="notification-container"></div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

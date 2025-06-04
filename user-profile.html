@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot 2025-01-25 221809.png" alt="Job Portal Logo" class="logo">
+            <span class="logo-text">Job Portal</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="job-list.html">Jobs</a></li>
+                <li><a href="user-dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+        <span class="toggle-bar">&#9776;</span>
+    </header>
+
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        <form id="profile-form">
+            <div class="profile-image-container">
+                <div class="crop-circle">
+                    <img src="../images/default-profile.png" alt="Profile Image" class="profile-image" id="profile-image">
+                </div>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="job-experience">Job Experience</label>
+            <input type="text" id="job-experience" name="job-experience" placeholder="Enter your job experience" required>
+
+            <label for="graduated-year">Graduated Year</label>
+            <input type="number" id="graduated-year" name="graduated-year" placeholder="Enter your graduated year" required>
+
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" name="skills" placeholder="Enter your skills" required>
+
+            <label for="resume">Resume</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="user-profile.js"></script>
+</body>
+</html>

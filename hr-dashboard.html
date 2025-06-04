@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="hr-dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">HR DASHBOARD</div>
+        <div class="header-links">
+            <a href="index.html">Home</a>
+            <a href="hr-profile.html" id="profile-link">Profile</a>
+            <a href="user-dashboard.html">Job Posts</a>
+            <button class="logout-button" id="logout-button">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>HR Dashboard</h2>
+            <ul>
+                <li><a href="#job-applications">Job Applications</a></li>
+                <li><a href="#hr-availability">HR Availability</a></li>
+                <li><a href="#chat-container">Chat</a></li>
+                <li><a href="#simple-tests">Simple Tests</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <section id="job-applications">
+                <h2>Job Applications</h2>
+                <div id="applications-list">
+                    <!-- Dynamic Job Applications Data Here -->
+                    <!-- Example application, will be dynamically generated -->
+                </div>
+            </section>
+
+            <section id="hr-availability">
+                <h2>HR Availability</h2>
+                <p>Monday to Friday: 9 AM - 5 PM</p>
+                <p>Saturday: 10 AM - 3 PM</p>
+            </section>
+
+            <section id="chat-container">
+                <h2>Chat</h2>
+                <div id="chat-selection">
+                    <h3>Select a Chat</h3>
+                    <button id="select-user-chat" class="chat-select-button">Chat with Users</button>
+                    <button id="select-admin-chat" class="chat-select-button">Chat with Admin</button>
+                </div>
+                <div id="chat-interface" style="display:none;">
+                    <div id="chat-messages">
+                        <!-- Chat Messages will be dynamically loaded here -->
+                    </div>
+                    <textarea id="message-input" placeholder="Type a message..."></textarea>
+                    <button id="send-message">Send</button>
+                </div>
+            </section>
+
+            <section id="simple-tests">
+                <h2>Simple Tests</h2>
+                <div id="tests-list">
+                    <!-- Dynamic Test Data Here -->
+                    <div class="test">
+                        <h3>Test Title: Coding Challenge</h3>
+                        <p>Description: Solve the following coding problems...</p>
+                        <button class="start-test">Start Test</button>
+                    </div>
+                    <!-- More tests will be listed here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Chat Modal for User Chat -->
+    <div id="user-chat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-user-chat">&times;</span>
+            <h2>Chat with Candidate</h2>
+            <div id="user-chat-messages">
+                <!-- Chat messages with the user will be displayed here -->
+            </div>
+            <textarea id="user-message-input" placeholder="Type your message..."></textarea>
+            <button id="user-send-message">Send</button>
+        </div>
+    </div>
+
+    <!-- Chat Modal for Admin Chat -->
+    <div id="admin-chat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-admin-chat">&times;</span>
+            <h2>Chat with Admin</h2>
+            <div id="admin-chat-messages">
+                <!-- Chat messages with the admin will be displayed here -->
+            </div>
+            <textarea id="admin-message-input" placeholder="Type your message..."></textarea>
+            <button id="admin-send-message">Send</button>
+        </div>
+    </div>
+
+    <script src="hr-dashboard.js"></script>
+</body>
+</html>

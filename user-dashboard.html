@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="user-dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot 2025-01-25 221809.png" alt="Company Logo" class="logo">
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="logout-link">Sign Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="user-dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>User Dashboard</h2>
+            <div class="profile-preview">
+                <button id="profile-button">Profile</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#job-search-section" class="sidebar-link">Job Search</a></li>
+                    <li><a href="#available-jobs" class="sidebar-link">Available Jobs</a></li>
+                    <li><a href="#saved-jobs" class="sidebar-link">Saved Jobs</a></li>
+                    <li><a href="#applied-jobs" class="sidebar-link">Applied Jobs</a></li>
+                </ul>
+            </nav>
+            <a href="#" id="logout-link" class="logout-button">Sign Out</a>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Job Search Section -->
+            <section id="job-search-section">
+                <h2>Search for Jobs</h2>
+                <input type="text" id="search-bar" placeholder="Search for jobs...">
+                <button id="search-button">Search</button>
+                <div id="job-results">
+                    <!-- Job results will be displayed here -->
+                </div>
+            </section>
+
+            <!-- Available Jobs Section -->
+            <section id="available-jobs">
+                <h2>Available Jobs</h2>
+                <div id="job-list">
+                    <!-- Job cards will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Saved Jobs Section -->
+            <section id="saved-jobs">
+                <h2>Saved Jobs</h2>
+                <div id="saved-job-list">
+                    <!-- Saved job cards will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Applied Jobs Section -->
+            <section id="applied-jobs">
+                <h2>Applied Jobs</h2>
+                <div id="applied-job-list">
+                    <!-- Applied job cards will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Profile</h2>
+            <div id="profile-details">
+                <img id="modal-profile-picture" src="" alt="Profile Picture">
+                <p id="modal-user-name">Name: </p>
+                <p id="modal-email">Email: </p>
+                <p id="modal-location">Location: </p>
+                <p id="modal-skills">Skills: </p>
+                <!-- Add more profile details as needed -->
+            </div>
+            <button id="edit-profile-button">Edit Profile</button>
+        </div>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chat-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chat with HR</h2>
+            <div id="chat-box">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <textarea id="chat-message" placeholder="Type your message..."></textarea>
+            <button id="send-message-button">Send</button>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification">
+        <!-- Notifications will be dynamically added here -->
+    </div>
+
+    <!-- Test Modal -->
+    <div id="test-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Test Assigned</h2>
+            <div id="test-content">
+                <!-- Test content will be displayed here -->
+            </div>
+            <button id="start-test-button">Start Test</button>
+        </div>
+    </div>
+
+    <!-- Job Apply Modal -->
+    <div id="job-apply-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Apply for Job</h2>
+            <form id="job-apply-form">
+                <!-- Dynamic job details will be populated here -->
+                <p>Job Title: <span id="apply-job-title"></span></p>
+                <p>Job Description: <span id="apply-job-description"></span></p>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="user-dashboard.js"></script>
+</body>
+</html>

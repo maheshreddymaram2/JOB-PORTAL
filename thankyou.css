@@ -1,0 +1,176 @@
+/* General styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #008080; /* Teal background */
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a,
+nav ul li button {
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    color: #d0d0d0; /* Light gray for hover effect */
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+}
+
+.container, .thank-you-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    background: #fff;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Dark gray */
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px;
+}
+
+.form-buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.form-buttons button {
+    background-color: #008080; /* Teal background */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #005757; /* Darker teal on hover */
+}
+
+.message-box {
+    background: #fff;
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-box h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333; /* Dark gray for text */
+}
+
+.message-box p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #555; /* Darker gray for text */
+}
+
+.dashboard-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008080; /* Teal background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.dashboard-button:hover {
+    background-color: #005757; /* Darker teal on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #008080; /* Teal background */
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
+    margin: 0;
+}

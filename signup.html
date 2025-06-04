@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="signup.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot 2025-01-25 221809.png" alt="Job Portal Logo" class="logo">
+        </div>
+        <div class="toggle-bar" onclick="toggleMenu()">☰</div>
+        <nav id="navMenu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="job-list.html">Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <label>
+                Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Password:
+                <input type="password" name="password" required>
+            </label>
+            
+            <!-- User type radio buttons -->
+            <div class="login-options">
+                <label>
+                    <input type="radio" name="userType" value="user" checked>
+                    <span>Register as User</span>
+                </label>
+                <label>
+                    <input type="radio" name="userType" value="hr">
+                    <span>Register as HR</span>
+                </label>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

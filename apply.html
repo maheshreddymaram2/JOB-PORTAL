@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job</title>
+    <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Add your navbar here -->
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>Apply for Job</h1>
+            <form id="application-form" action="/submit-application" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile-number">Mobile Number:</label>
+                    <input type="tel" id="mobile-number" name="mobileNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" onclick="window.history.back()">Back</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="apply.js"></script>
+</body>
+</html>

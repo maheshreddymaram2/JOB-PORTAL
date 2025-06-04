@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Job Portal</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="job-list.html">Jobs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h1>Sign In</h1>
+        <form id="loginForm" action="#" method="post">
+            <div class="login-options">
+                <label>
+                    <input type="radio" name="loginAs" value="user" required> Login as User
+                </label>
+                <label>
+                    <input type="radio" name="loginAs" value="hr"> Login as HR
+                </label>
+                <label>
+                    <input type="radio" name="loginAs" value="admin"> Login as Admin
+                </label>
+            </div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
